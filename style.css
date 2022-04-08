@@ -1,0 +1,68 @@
+/* CSS reset */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the reusable parts */
+
+:root{
+    --greenish: #009879;
+    --lightgray: #ddd;
+    --minilightgray: #f3f3f3;
+}
+
+/* Styling the table */
+
+.content-table{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-weight: 300;
+    padding: 0 1rem;
+    border-radius: 0.3125rem 0.3125rem 0 0;
+    overflow: hidden;
+}
+
+/* Some Tinkering */
+.content-table, .content-table thead, .content-table tbody, .content-table tr{
+    display: flex;
+}
+
+.content-table, .content-table thead, .content-table tbody{
+    flex-direction: column;
+}
+
+.content-table tr{
+    justify-content: space-between;
+}
+
+.content-table tr td, .content-table tr th{
+    width: 100%;
+}
+
+/* Tinkering end */
+
+.content-table thead tr{
+    background-color: var(--greenish);
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th, .content-table td{
+    padding: 0.9375rem 0.75rem;
+}
+
+.content-table tbody tr{
+    border-bottom: 0.0625rem solid var(--lightgray);
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: var(--minilightgray);
+}
+
+/* .content-table tbody tr:last-of-type{
+    border-bottom: 0.0125rem solid var(--greenish);
+} */
